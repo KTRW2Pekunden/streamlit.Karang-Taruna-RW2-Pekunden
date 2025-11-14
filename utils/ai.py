@@ -25,7 +25,7 @@ def formatedWithAI(catatan: str) -> str:
             model="gemini-2.5-flash",
             contents=[catatan],
             config=types.GenerateContentConfig(
-                temperature=0.1,
+                temperature=0.7,
                 system_instruction="""
 Kamu adalah asisten yang merapikan notulen rapat.
 
