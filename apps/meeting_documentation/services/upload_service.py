@@ -14,7 +14,7 @@ class UploadService:
         total_files = len(photo_files)
         
         for idx, photo in enumerate(photo_files):
-            progress = (idx + 1) / (total_files + 2)  # +2 untuk AI dan save
+            progress = (idx + 1) / (total_files + 2) 
             progress_bar.progress(progress)
             status_text.info(f"📤 Mengunggah {photo.name}... ({idx + 1}/{total_files})")
             
