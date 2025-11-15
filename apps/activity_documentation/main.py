@@ -4,7 +4,7 @@ from .ui.upload_form import render_upload_form
 from .config import GAS_WEBAPP_URL
 from .utils.state_utils import reset_upload_state
 from .ui.gallery_ui import show_gallery
-from auth import login
+from auth import require_login
 
 def run():
     st.set_page_config(page_title="KT. RW2 PEKUNDEN", layout="centered")
@@ -18,7 +18,7 @@ def run():
         show_gallery()
 
     with tab_upload:
-        if login():
+        if require_login():
             st.session_state.setdefault("is_processing", False)
             st.session_state.setdefault("form_data", None)
 

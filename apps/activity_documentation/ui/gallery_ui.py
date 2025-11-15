@@ -47,7 +47,7 @@ def show_gallery():
                 if "image" in file["mimeType"]:
                     with cols[idx % 3]:
                         img_bytes = service.fetch_image_bytes(file["directUrl"])
-                        st.image(img_bytes, use_container_width=True)
+                        st.image(img_bytes, width='stretch')
 
                 else:
                     st.write(f"📄 File lain: [{file['name']}]({file['url']})")

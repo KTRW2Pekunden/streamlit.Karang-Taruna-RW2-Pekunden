@@ -16,6 +16,7 @@ class UploadService:
             b64file = base64.b64encode(file_bytes).decode()
 
             payload = {
+                "action": "upload", 
                 "activity": activity_name,
                 "date": meeting_date,
                 "name": photo.name,
